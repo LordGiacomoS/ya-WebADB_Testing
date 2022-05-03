@@ -19,6 +19,7 @@ specifiers:
   '@rush-temp/adb-credential-web': file:./projects/adb-credential-web.tgz
   '@rush-temp/android-bin': file:./projects/android-bin.tgz
   '@rush-temp/dataview-bigint-polyfill': file:./projects/dataview-bigint-polyfill.tgz
+  '@rush-temp/debug-stream': file:./projects/debug-stream.tgz
   '@rush-temp/demo': file:./projects/demo.tgz
   '@rush-temp/event': file:./projects/event.tgz
   '@rush-temp/scrcpy': file:./projects/scrcpy.tgz
@@ -51,6 +52,7 @@ specifiers:
   react: ^17.0.2
   react-dom: ^17.0.2
   source-map-loader: ^3.0.1
+  stacktracey: ^2.1.8
   streamsaver: ^2.0.5
   ts-jest: ^27.1.3
   tslib: ^2.3.1
@@ -83,6 +85,7 @@ dependencies:
   '@rush-temp/adb-credential-web': file:projects/adb-credential-web.tgz
   '@rush-temp/android-bin': file:projects/android-bin.tgz
   '@rush-temp/dataview-bigint-polyfill': file:projects/dataview-bigint-polyfill.tgz
+  '@rush-temp/debug-stream': file:projects/debug-stream.tgz
   '@rush-temp/demo': file:projects/demo.tgz_@mdx-js+react@1.6.22
   '@rush-temp/event': file:projects/event.tgz
   '@rush-temp/scrcpy': file:projects/scrcpy.tgz
@@ -115,6 +118,7 @@ dependencies:
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   source-map-loader: 3.0.1
+  stacktracey: 2.1.8
   streamsaver: 2.0.6
   ts-jest: 27.1.4_@types+jest@27.4.1+jest@27.5.1
   tslib: 2.4.0
@@ -4023,6 +4027,12 @@ packages:
       es-shim-unscopables: 1.0.0
     dev: false
 
+  /as-table/1.0.55:
+    resolution: {integrity: sha512-xvsWESUJn0JN421Xb9MQw6AsMHRCUknCe0Wjlxvjud80mU4E6hQf1A6NzQKcYNmYw62MfzEtXc+badstZP3JpQ==}
+    dependencies:
+      printable-characters: 1.0.42
+    dev: false
+
   /asap/2.0.6:
     resolution: {integrity: sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY=}
     dev: false
@@ -5109,6 +5119,10 @@ packages:
 
   /damerau-levenshtein/1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
+    dev: false
+
+  /data-uri-to-buffer/2.0.2:
+    resolution: {integrity: sha512-ND9qDTLc6diwj+Xe5cdAgVTbLVdXbtxTJRXRhli8Mowuaan+0EJOtdqJ0QCHNSSPyoXGx9HX2/VMnKeC34AChA==}
     dev: false
 
   /data-urls/2.0.0:
@@ -6427,6 +6441,13 @@ packages:
   /get-package-type/0.1.0:
     resolution: {integrity: sha512-pjzuKtY64GYfWizNAJ0fr9VqttZkNiK2iS430LtIHzjBEr6bX8Am2zm4sW4Ro5wjWW5cAlRL1qAMTcXbjNAO2Q==}
     engines: {node: '>=8.0.0'}
+    dev: false
+
+  /get-source/2.0.12:
+    resolution: {integrity: sha512-X5+4+iD+HoSeEED+uwrQ07BOQr0kEDFMVqqpBuI+RaZBpBpHCuXxo70bjar6f0b0u/DQJsJ7ssurpP0V60Az+w==}
+    dependencies:
+      data-uri-to-buffer: 2.0.2
+      source-map: 0.6.1
     dev: false
 
   /get-stream/2.3.1:
@@ -9604,6 +9625,10 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
+  /printable-characters/1.0.42:
+    resolution: {integrity: sha1-Pxjpd6m9jrN/zE/1ZZ176Qhos9g=}
+    dev: false
+
   /prism-react-renderer/1.3.1_react@17.0.2:
     resolution: {integrity: sha512-xUeDMEz074d0zc5y6rxiMp/dlC7C+5IDDlaEUlcBOFE2wddz7hz5PNupb087mPwTt7T9BrFmewObfCBuf/LKwQ==}
     peerDependencies:
@@ -10545,6 +10570,15 @@ packages:
       websocket-driver: 0.7.4
     dev: false
 
+  /solox/1.0.2_react@17.0.2:
+    resolution: {integrity: sha512-ROPFjj0C7SDHwuH6q/1Slpg5rJD2hf8yyQzWMSoE3qElLsEAE1DbEvBvh40Z6x2fX44OYTZ/OOW/CvX8LchZUw==}
+    peerDependencies:
+      react: '>= 16.8.0 < 18'
+    dependencies:
+      immer: 9.0.12
+      react: 17.0.2
+    dev: false
+
   /sort-css-media-queries/2.0.4:
     resolution: {integrity: sha512-PAIsEK/XupCQwitjv7XxoMvYhT7EAfyzI3hsy/MyDgTvc+Ft55ctdkctJLOy6cQejaIC+zjpUL4djFVm2ivOOw==}
     engines: {node: '>= 6.3.0'}
@@ -10663,6 +10697,13 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       escape-string-regexp: 2.0.0
+    dev: false
+
+  /stacktracey/2.1.8:
+    resolution: {integrity: sha512-Kpij9riA+UNg7TnphqjH7/CzctQ/owJGNbFkfEeve4Z4uxT5+JapVLFXcsurIfN34gnTWZNJ/f7NMG0E8JDzTw==}
+    dependencies:
+      as-table: 1.0.55
+      get-source: 2.0.12
     dev: false
 
   /state-toggle/1.0.3:
@@ -12075,7 +12116,7 @@ packages:
     dev: false
 
   file:projects/adb-backend-direct-sockets.tgz:
-    resolution: {integrity: sha512-e9HkwyYYpfGNXrLZ9DjrtKpzw4V+F5jmTWhFI7aZLQR3N+RCUToUYlzzhxCkMHxgu8KMk04EQ+gOFHUuMIkyWQ==, tarball: file:projects/adb-backend-direct-sockets.tgz}
+    resolution: {integrity: sha512-7AqOmac/7ic7QQvLBriRA0TZTCSaTQeHPDfHxiyDNmtilD7ncLK0HksdOMKgrBAZ623QbEqbDIf5VLAnf94v3Q==, tarball: file:projects/adb-backend-direct-sockets.tgz}
     name: '@rush-temp/adb-backend-direct-sockets'
     version: 0.0.0
     dependencies:
@@ -12085,7 +12126,7 @@ packages:
     dev: false
 
   file:projects/adb-backend-webusb.tgz:
-    resolution: {integrity: sha512-V5SNAsb+G3dPgXvGA3rWw+8/WPyrIVhRjwhCYzr5B+yH2ey8tup6cOFPRJVYWf9VQmi3SkWXXYoJhXvPgtRjMQ==, tarball: file:projects/adb-backend-webusb.tgz}
+    resolution: {integrity: sha512-IDkDb86sXuMscGyLymiQg1gEoYv7GBcQr0bE9q8LJDWqquzDO5yAn8RqO6BUruke+D0QKP6G3O8fAN5Cw7UyXQ==, tarball: file:projects/adb-backend-webusb.tgz}
     name: '@rush-temp/adb-backend-webusb'
     version: 0.0.0
     dependencies:
@@ -12103,7 +12144,7 @@ packages:
     dev: false
 
   file:projects/adb-backend-ws.tgz:
-    resolution: {integrity: sha512-Z9akKcrp5E17cUpodZzOyss2Qk3B9gEKUO4BaT62xImdSsjRF0mKHZYfHpCuYcuFpyM6cRZtjP/zfozyPNHRVA==, tarball: file:projects/adb-backend-ws.tgz}
+    resolution: {integrity: sha512-YF2Ze9DYNPBZWjsW9Mgcf5gjmqQzA4DTLqROLvpKRE3LNA1VZtsXFc602Du8FgboPNitZOXAWL0OAfLweXtUWw==, tarball: file:projects/adb-backend-ws.tgz}
     name: '@rush-temp/adb-backend-ws'
     version: 0.0.0
     dependencies:
@@ -12120,7 +12161,7 @@ packages:
     dev: false
 
   file:projects/adb-credential-web.tgz:
-    resolution: {integrity: sha512-XM46ju/fSJcirmVtxJbSbKV1w4Vxt7Ira8iReVVBCrVBJkGgqnnJKJew164SxGJHPSyaBIi4hTQzCutxVCGUvQ==, tarball: file:projects/adb-credential-web.tgz}
+    resolution: {integrity: sha512-9+YRsnqavFwCvd19poqBrzh7Di74Kh8Sax7lwlAB7Mfq25F5vujQMm/597IEDtrmXo8+6awnyaWYD1uurQpiNQ==, tarball: file:projects/adb-credential-web.tgz}
     name: '@rush-temp/adb-credential-web'
     version: 0.0.0
     dependencies:
@@ -12129,7 +12170,7 @@ packages:
     dev: false
 
   file:projects/adb.tgz:
-    resolution: {integrity: sha512-AoLUX0iwbPksim/ilmdJAFck2Nfukit2rjvxV82QyBHxXT2m85DKxjx21llW9Sb/ayPWbBSOyKBXVv9APrEpIg==, tarball: file:projects/adb.tgz}
+    resolution: {integrity: sha512-ymt6XkMxR5Z3Rmo8L+yoydVaxx5wxzyo8CoeJy52mHf75kRcDVWHa/YPj/QFqB1sAPTqmUklxEou05AsnzpTWw==, tarball: file:projects/adb.tgz}
     name: '@rush-temp/adb'
     version: 0.0.0
     dependencies:
@@ -12155,7 +12196,7 @@ packages:
     dev: false
 
   file:projects/android-bin.tgz:
-    resolution: {integrity: sha512-vEKBRcS+3nESY4ImD441j6nqIMwfNhgTMfylHcObLzKYasNlq0yEZFxrZYPhO9sasnp23jMBD1qmCe5sL+gBxw==, tarball: file:projects/android-bin.tgz}
+    resolution: {integrity: sha512-KKrmyRawRR4VSj/Ht9B1mS1XaR4UMEF/jmDfliGLK75SJ+S16jbsEOVx1Jv0ksN4yvOoqdYlLzJ4e5Y+CnwX6A==, tarball: file:projects/android-bin.tgz}
     name: '@rush-temp/android-bin'
     version: 0.0.0
     dependencies:
@@ -12180,8 +12221,27 @@ packages:
       - utf-8-validate
     dev: false
 
+  file:projects/debug-stream.tgz:
+    resolution: {integrity: sha512-ZaQezLlLUInxE0PxnFxxJRtkMQAwIjv612NS6b8Sk5g+Mmf8xA4fIZ3OH1MtR2clySXTpcvgUBSJNjwqwHRgQQ==, tarball: file:projects/debug-stream.tgz}
+    name: '@rush-temp/debug-stream'
+    version: 0.0.0
+    dependencies:
+      jest: 27.5.1
+      stacktracey: 2.1.8
+      tslib: 2.4.0
+      typescript: 4.7.0-beta
+      web-streams-polyfill: 4.0.0-beta.2
+    transitivePeerDependencies:
+      - bufferutil
+      - canvas
+      - node-notifier
+      - supports-color
+      - ts-node
+      - utf-8-validate
+    dev: false
+
   file:projects/demo.tgz_@mdx-js+react@1.6.22:
-    resolution: {integrity: sha512-nzurxzBo/QuemsGUeg4xQeDScWp+2tGyd5lgzZY3IKLuEbg4ESikCtcwsc708aEE9NsJ3t9to9LoHprNtdPfUg==, tarball: file:projects/demo.tgz}
+    resolution: {integrity: sha512-vJgp66hDqsufrnDS5/Xe79UjFcptl0wk3YY7YrTDslIFAbst5jAciIQcltHVUauDjC9MRwzbOhii1mtDjDsvqg==, tarball: file:projects/demo.tgz}
     id: file:projects/demo.tgz
     name: '@rush-temp/demo'
     version: 0.0.0
@@ -12198,12 +12258,15 @@ packages:
       '@yume-chan/async': 2.1.4
       eslint: 8.8.0
       eslint-config-next: 12.1.5_97e81ec4b06f747bd0ad6ad05e6c2351
+      immer: 9.0.12
       mobx: 6.5.0
       mobx-react-lite: 3.3.0_3b110ddd052df537d55bc762cdd4d0b8
       next: 12.1.5_react-dom@17.0.2+react@17.0.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
+      solox: 1.0.2_react@17.0.2
       source-map-loader: 3.0.1
+      stacktracey: 2.1.8
       streamsaver: 2.0.6
       typescript: 4.7.0-beta
       xterm: 4.18.0
@@ -12242,7 +12305,7 @@ packages:
     dev: false
 
   file:projects/scrcpy.tgz:
-    resolution: {integrity: sha512-4GY0s6l1pOgSecgskPB9QAaJ7jGh5n/tq0ugmoZ5RunPIEzYR2KHiUkP6opEtWWxiusXEb7Bq3j/e6K+VzCEEQ==, tarball: file:projects/scrcpy.tgz}
+    resolution: {integrity: sha512-na5dX7c756JC3m6mAn7kHxmeth1pES4ihL8Dd/oy/S+UpTl1mXJIMAnuMV2SpX7AUWI0SGsdenczvyuNUPt9NQ==, tarball: file:projects/scrcpy.tgz}
     name: '@rush-temp/scrcpy'
     version: 0.0.0
     dependencies:
@@ -12267,7 +12330,7 @@ packages:
     dev: false
 
   file:projects/struct.tgz:
-    resolution: {integrity: sha512-o0pzHy3Ap1k+sCOqglcQ418A/oSJ9G9SQ6OI2dPIvJArRa8FI+MCGNUrjTyVZqUzxDHOXF32JfX/QKwksMSbRg==, tarball: file:projects/struct.tgz}
+    resolution: {integrity: sha512-MXgAztVxxx9r6W9TV+R8G2C4yeq/jg0BMCasCDcjII+GT3l+wrERjWojje2cmsBHlv0AYPeSlNsmsK016+FS0g==, tarball: file:projects/struct.tgz}
     name: '@rush-temp/struct'
     version: 0.0.0
     dependencies:

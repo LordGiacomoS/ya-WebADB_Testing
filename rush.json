@@ -486,6 +486,11 @@
             "versionPolicyName": "adb"
         },
         {
+            "packageName": "@yume-chan/debug-stream",
+            "projectFolder": "libraries/debug-stream",
+            "versionPolicyName": "adb"
+        },
+        {
             "packageName": "demo",
             "projectFolder": "apps/demo"
         },
