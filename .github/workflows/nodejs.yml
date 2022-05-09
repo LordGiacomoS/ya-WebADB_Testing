@@ -10,7 +10,7 @@ on:
     branches: [more-text-inject]
 
 env:
-  BASE_PATH: /ya-webadb
+  BASE_PATH: /ya-webadb/tree/more-text-inject
 
 jobs:
   build:
