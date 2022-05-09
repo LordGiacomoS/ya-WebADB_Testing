@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [master]
+    branches: [more-text-inject]
   pull_request:
-    branches: [master]
+    branches: [more-text-inject]
 
 env:
   BASE_PATH: /ya-webadb
