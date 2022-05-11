@@ -111,6 +111,8 @@ export interface ScrcpyOptionsInit1_16 {
     codecOptions: CodecOptions;
 
     encoderName: string;
+
+    turnScreenOff: boolean;
 }
 
 export const VideoPacket =
