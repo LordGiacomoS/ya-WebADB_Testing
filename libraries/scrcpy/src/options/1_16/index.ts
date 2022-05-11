@@ -187,7 +187,7 @@ export class ScrcpyOptions1_16<T extends ScrcpyOptionsInit1_16 = ScrcpyOptionsIn
             stayAwake: false,
             codecOptions: new CodecOptions({}),
             encoderName: '-',
-            turn_screen_off: false,
+            turnScreenOff: false,
         } as T;
     }
 
