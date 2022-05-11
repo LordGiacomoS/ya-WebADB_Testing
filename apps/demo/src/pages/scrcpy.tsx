@@ -107,7 +107,7 @@ interface Settings {
     lockVideoOrientation?: ScrcpyVideoOrientation;
     displayId?: number;
     crop: string;
-    turn_screen_off?: boolean;
+    turnScreenOff?: boolean;
 }
 
 interface SettingDefinitionBase {
@@ -464,7 +464,7 @@ class ScrcpyPageState {
         lockVideoOrientation: ScrcpyVideoOrientation.Unlocked,
         displayId: 0,
         crop: '',
-        turn_screen_off: false,
+        turnScreenOff: false,
     };
 
     get settingDefinitions() {
@@ -593,7 +593,7 @@ class ScrcpyPageState {
         });
         
         result.push({
-            key: 'turn_screen_off',
+            key: 'turnScreenOff',
             type: 'toggle',
             label: 'Turn Screen Off',
             description: 'Turns the android device screen off while allowing use via scrcpy (Does not work on all devices)'
