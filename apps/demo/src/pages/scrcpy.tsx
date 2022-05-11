@@ -1008,13 +1008,13 @@ class ScrcpyPageState {
         }
 
         const keyCode = ({
-            ArrowUp: AndroidKeyCode.ArrowUp,
-            ArrowDown: AndroidKeyCode.ArrowDown,
-            ArrowLeft: AndroidKeyCode.ArrowLeft,
-            ArrowRight: AndroidKeyCode.ArrowRight,
             Backspace: AndroidKeyCode.Delete,
-            Space: AndroidKeyCode.Space,
             Enter: AndroidKeyCode.Enter,
+            Space: AndroidKeyCode.Space,
+            ArrowLeft: AndroidKeyCode.ArrowLeft,
+            ArrowUp: AndroidKeyCode.ArrowUp,
+            ArrowRight: AndroidKeyCode.ArrowRight,
+            ArrowDown: AndroidKeyCode.ArrowDown,
         } as Record<string, AndroidKeyCode | undefined>)[code];
 
         if (keyCode) {
