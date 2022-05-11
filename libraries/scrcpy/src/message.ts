@@ -69,6 +69,10 @@ export enum AndroidKeyEventAction {
 export enum AndroidKeyCode {
     Home = 3,
     Back = 4,
+    ArrowUp = 19,
+    ArrowDown,
+    ArrowLeft,
+    ArrowRight,
     A = 29,
     B,
     C,
@@ -97,7 +101,7 @@ export enum AndroidKeyCode {
     Z,
     Space = 62,
     Enter = 66,
-    Delete = 67,
+    Delete,
     AppSwitch = 187,
 }
 
