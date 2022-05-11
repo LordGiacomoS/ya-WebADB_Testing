@@ -1008,6 +1008,10 @@ class ScrcpyPageState {
         }
 
         const keyCode = ({
+            ArrowUp: AndroidKeyCode.ArrowUp,
+            ArrowDown: AndroidKeyCode.ArrowDown,
+            ArrowLeft: AndroidKeyCode.ArrowLeft,
+            ArrowRight: AndroidKeyCode.ArrowRight,
             Backspace: AndroidKeyCode.Delete,
             Space: AndroidKeyCode.Space,
             Enter: AndroidKeyCode.Enter,
