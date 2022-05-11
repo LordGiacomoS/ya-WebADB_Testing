@@ -30,7 +30,10 @@ export interface CodecOptionsInit {
 
     level: AndroidCodecLevel;
 }
-
+export enum ScrcpyScreenPowerMode {
+    off = 0,
+    normal = 2,
+}
 export class CodecOptions implements ScrcpyOptionValue {
     public value: Partial<CodecOptionsInit>;
 
@@ -164,6 +167,7 @@ export class ScrcpyOptions1_16<T extends ScrcpyOptionsInit1_16 = ScrcpyOptionsIn
             'stayAwake',
             'codecOptions',
             'encoderName',
+            'turnScreenOff',
         ];
     }
 
@@ -183,6 +187,7 @@ export class ScrcpyOptions1_16<T extends ScrcpyOptionsInit1_16 = ScrcpyOptionsIn
             stayAwake: false,
             codecOptions: new CodecOptions({}),
             encoderName: '-',
+            turn_screen_off: false,
         } as T;
     }
 
